@@ -30,7 +30,7 @@ function ProjectCard({ item, i }) {
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative overflow-hidden rounded-3xl border border-white/30 bg-white/40 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl"
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
@@ -39,23 +39,23 @@ function ProjectCard({ item, i }) {
           className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
           loading="lazy"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </div>
       <div className="absolute inset-0 flex items-end p-6">
         <div className="w-full">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg md:text-xl font-semibold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+            <h3 className="text-lg md:text-xl font-semibold tracking-tight text-white">
               {item.title}
             </h3>
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               whileHover={{ opacity: 1, y: 0 }}
-              className="pointer-events-none rounded-full bg-white/80 px-3 py-1 text-xs text-slate-900 backdrop-blur-xl"
+              className="pointer-events-none rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200 backdrop-blur-xl border border-white/10"
             >
               View
             </motion.div>
           </div>
-          <p className="mt-2 text-sm text-white/80">{item.tag}</p>
+          <p className="mt-2 text-sm text-slate-300">{item.tag}</p>
         </div>
       </div>
     </motion.div>
@@ -66,8 +66,8 @@ export default function Projects() {
   return (
     <section id="work" className="relative mx-auto max-w-6xl px-6 py-20">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">Selected Work</h2>
-        <p className="mt-3 text-slate-600">A curated collection of edits blending narrative pacing, tasteful motion, and contemporary color palettes.</p>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Selected Work</h2>
+        <p className="mt-3 text-slate-300">A curated collection of edits blending narrative pacing, tasteful motion, and contemporary color palettes.</p>
       </div>
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, idx) => (

@@ -11,7 +11,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-black text-white">
       <Navbar />
       <Hero />
       <Projects />
